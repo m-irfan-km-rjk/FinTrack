@@ -34,6 +34,7 @@ public class User {
     @Column
     private LocalDate joinedDate;
 
+    @Builder.Default
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Transaction> transactions = new ArrayList<>();
 }
